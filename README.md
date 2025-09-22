@@ -1,30 +1,32 @@
-#  Transformers 
+# Transformers Lab: BERT & RoBERTa Implementation
 
-## Project Overview
-This repository contains the implementation of Lab 5 focusing on transformer models, including BERT embeddings, fine-tuning for classification, and autoregressive text generation.
+## Project Description
+This project demonstrates practical applications of transformer models including text similarity analysis, text classification, and autoregressive text generation using BERT and RoBERTa.
 
-## 📋 Project Tasks
+## Features
+- **Text Similarity**: Compute semantic similarity using BERT embeddings
+- **Text Classification**: Fine-tune RoBERTa for sentiment analysis
+- **Text Generation**: Autoregressive text completion with BERT
 
-### Text Similarity with BERT
-- **Objective**: Compute cosine similarity between BERT embeddings
-- **Input**: `data/task1/sentences.csv`
-- **Output**: `similarity.csv`
-- **Key Features**: Batch processing, GPU acceleration, similarity matrix generation
+## Models Used
+- BERT-base for embeddings and generation
+- RoBERTa-base for classification
+- Custom training pipelines and evaluation
 
-###  Fine-Tuning RoBERTa for Classification
-- **Objective**: Binary text classification with F1-score > 0.77
-- **Input**: `data/task2/train/` and `data/task2/test/`
-- **Output**: `submission.csv`
-- **Model**: RoBERTa-base with custom classification head
-- **Training**: Early stopping, learning rate scheduling, stratified validation
+## Technical Highlights
+- GPU-accelerated training and inference
+- Early stopping and learning rate scheduling
+- Batch processing for efficiency
+- Custom dataset handling
 
-###  Autoregressive BERT Extension
-- **Objective**: Text generation using BERT with causal masking
-- **Features**: Recursive generation, automatic stopping conditions
-- **Examples**: "The capital of France is Paris."
+## Results
+- Achieved >0.79 F1-score on classification task
+- Successful text generation with coherent outputs
+- Efficient similarity computation for text pairs
 
-## 🚀 Quick Start
+## Quick Start
+```python
+# Install dependencies
+pip install transformers torch datasets
 
-### Prerequisites
-```bash
-pip install transformers torch scikit-learn datasets matplotlib
+# Run the main notebook to see all implementations
